@@ -1,423 +1,447 @@
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Playfair+Display&display=swap");
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-    font-size: 16px; /*1rem = 10px*/
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-size: 16px; /*1rem = 10px*/
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*** Globales ***/
 .contenedor {
-    max-width: 100rem;
-    margin: 0 auto;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
-.titulo1{
-    font-family: 'Handjet';
-    font-size: 60px;
+.titulo1 {
+  font-family: "Handjet";
+  font-size: 60px;
 }
-.p-title1{
-    font-family: 'Playfair Display';
-    font-size: 18px;
+.p-title1 {
+  font-family: "Playfair Display";
+  font-size: 18px;
 }
-.title2, .title3, .p-title2{
-    font-family: 'Playfair Display';
+.title2,
+.title3,
+.p-title2 {
+  font-family: "Playfair Display";
 }
 h2 {
-    text-align: center;
-    margin-top: 5rem;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 .nav-fondo {
-    background-color: #212121;
-    position: sticky;
-    top: 0rem;
+  background-color: #212121;
+  position: sticky;
+  top: 0rem;
 }
 
 .boton {
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.7rem;
-    background-color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.7rem;
+  background-color: white;
 }
 
 .boton:hover {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 /***************************** Index ***************************/
 /*** Header ***/
 /* Imagen de fondo */
-.header{
-    background-image: url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg);
-    height: 70vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+.header {
+  background-image: url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg);
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.contenedor-header{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 60%);
-    height: 100%;
-    width: 100%;
+.contenedor-header {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 60%);
+  height: 100%;
+  width: 100%;
 }
 
 /* Navegación */
 .navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navegacion nav a {
-    margin-left: 2rem;
-    color: white;
+  margin-left: 2rem;
+  color: white;
 }
 
-.navegacion nav a:hover{
-    text-decoration: underline;
+.navegacion nav a:hover {
+  text-decoration: underline;
 }
 
 /* Titulo y subtitulo */
-.titulo-header{
-    color: white;
-    text-align: center;
-    padding-top: 10rem;
-    /* padding-top: 20rem; */
+.titulo-header {
+  color: white;
+  text-align: center;
+  padding-top: 10rem;
+  /* padding-top: 20rem; */
 }
 .conocimientos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 6rem;
-    margin: 1rem 0 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6rem;
+  margin: 1rem 0 6rem 0;
 }
 
 .conocimientos section svg {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 }
 .conocimientos section {
-    border: 1px solid black;
-    border-radius: 1rem;
-    padding: 2rem 4rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
 }
 
 /* Tu CSS existente */
 
 .ruleta-botones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 100rem; /* Cambiamos el valor para que coincida con el ancho máximo del .contenedor */
-    margin: 0 auto;
-    padding: 2rem; /* Añadimos espacio entre los botones y los contenedores */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100rem; /* Cambiamos el valor para que coincida con el ancho máximo del .contenedor */
+  margin: 0 auto;
+  padding: 2rem; /* Añadimos espacio entre los botones y los contenedores */
 }
 
 .boton-circular {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: white;
-    color: #022859;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px; /* Agregamos un pequeño espacio de separación */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregamos una sombra */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #022859;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px; /* Agregamos un pequeño espacio de separación */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregamos una sombra */
 }
 
 .boton-circular:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 /*** Footer ***/
 .footer {
-    background-color: #591D33;
-    margin-top: auto;
+  background-color: #591d33;
+  margin-top: auto;
 }
 
 .contenedor-footer {
-    padding: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer p{
-    margin: 0;
-    color: white;
+.footer p {
+  margin: 0;
+  color: white;
 }
 
-.r-sociales a{
-    margin-right: 2rem;
-    color: white;
+.r-sociales a {
+  margin-right: 2rem;
+  color: white;
 }
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tabletas y teléfonos) */
 @media screen and (max-width: 768px) {
-    .fa-solid {
-        display: none;
-      }
-    h1 {
-        font-size: 36px;
-      }
-    
-      .titulo1 {
-        font-size: 40px;
-      }
-    
-      .p-title1 {
-        font-size: 16px;
-      }
-    
-      .title2,
-      .title3,
-      .p-title2 {
-        font-size: 16px;
-      }
-    
-      /* Reduce el padding y el tamaño del botón */
-      .boton {
-        padding: 0.3rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 14px;
-      }
-    .header {
-        height: 50vh; /* Reducir la altura del header en dispositivos móviles */
-      }
-    
-      .contenedor-header {
-        background-color: rgba(0, 0, 0, 80%); /* Aumentar la opacidad del fondo en dispositivos móviles */
-      }
-    
-      .navegacion {
-        flex-direction: column; /* Colocar los enlaces de navegación en columna */
-        align-items: center; /* Centrar los elementos en el eje horizontal */
-      }
-    
-      .navegacion nav a {
-        margin: 0.5rem 0; /* Agregar espacio vertical entre los enlaces */
-      }
-    .conocimientos {
-        grid-template-columns: 1fr; /* Mostrar solo una sección por fila */
-        column-gap: 3rem; /* Reducir el espacio entre las secciones */
-        margin: 1rem 0 3rem 0; /* Reducir el margen inferior */
-      }
-    
-      .conocimientos section {
-        padding: 1.5rem 2rem; /* Reducir el padding de las secciones */
-      }
-    
-      .ruleta-botones {
-        flex-direction: row; /* Colocar los botones a los lados */
-        justify-content: center; /* Centrar los botones horizontalmente */
-        align-items: center; /* Centrar los botones verticalmente */
-        padding: 1rem 0; /* Reducir el espacio entre los botones y los contenedores */
-      }
-    
-      .boton-circular {
-        margin: 0 5px; /* Agregar espacio horizontal entre los botones */
-      }
-    .contenedor-footer {
-        flex-direction: column; /* Colocar los elementos en columna */
-        align-items: center; /* Centrar los elementos en el eje horizontal */
-        text-align: center; /* Centrar el texto */
-      }
-    
-      .r-sociales a {
-        margin: 0.5rem; /* Agregar espacio vertical y horizontal entre los íconos */
-      }
+  .fa-solid {
+    display: none;
   }
-  
+  h1 {
+    font-size: 36px;
+  }
+
+  .titulo1 {
+    font-size: 40px;
+  }
+
+  .p-title1 {
+    font-size: 16px;
+  }
+
+  .title2,
+  .title3,
+  .p-title2 {
+    font-size: 16px;
+  }
+
+  /* Reduce el padding y el tamaño del botón */
+  .boton {
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 14px;
+  }
+  .header {
+    height: 50vh; /* Reducir la altura del header en dispositivos móviles */
+  }
+
+  .contenedor-header {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      80%
+    ); /* Aumentar la opacidad del fondo en dispositivos móviles */
+  }
+
+  .navegacion {
+    flex-direction: column; /* Cambiar la dirección del flex container a columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .navegacion nav {
+    margin-top: 1rem; /* Agregar espacio entre el logo y los enlaces */
+  }
+
+  .navegacion nav a {
+    margin: 0.5rem 0; /* Agregar espacio vertical entre los enlaces */
+    text-align: center; /* Centrar el texto */
+    font-size: 18px; /* Tamaño de fuente más grande para una mejor legibilidad */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 0.5rem 1rem; /* Añadir un poco de espaciado interno */
+    border-radius: 0.5rem; /* Agregar esquinas redondeadas */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el mouse */
+  }
+
+  .navegacion nav a:hover {
+    /* Sin color de fondo al pasar el mouse */
+    background-color: transparent;
+  }
+  /* Mostrar solo una sección por fila */
+  .conocimientos {
+    grid-template-columns: 1fr; /* Mostrar una sola sección por página en dispositivos responsivos */
+    column-gap: 0; /* Eliminar el espacio entre las secciones */
+    margin: 1rem 0 3rem 0; /* Ajustar el margen inferior */
+  }
+
+  .conocimientos section {
+    padding: 1rem; /* Ajustar el padding para dispositivos responsivos */
+  }
+
+  .ruleta-botones {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .boton-circular {
+    margin: 0 5px;
+  }
+  .contenedor-footer {
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar los elementos en el eje horizontal */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .r-sociales a {
+    margin: 0.5rem; /* Agregar espacio vertical y horizontal entre los íconos */
+  }
+}
 
 /***************************** Sobre mi ***************************/
 /*** Conoceme ***/
 .conoceme {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 .contenedor-con {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .foto-con {
-    flex-basis: 35%;
+  flex-basis: 35%;
 }
 
 .foto-con img {
-    width: 80%;
-    margin-top: 1rem;
+  width: 80%;
+  margin-top: 1rem;
 }
 
 .descrip-con {
-    flex-basis: 65%;
+  flex-basis: 65%;
 }
 
 .descrip-con h3 {
-    text-align: left;
-    margin-top: 4rem;
+  text-align: left;
+  margin-top: 4rem;
 }
 
 /*** Cursos y certificaciones ***/
 .cursos {
-    margin: 8rem 0 5rem;
+  margin: 8rem 0 5rem;
 }
 
 .contenedor-cursos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  margin-top: 2rem;
 }
 
 .contenedor-cursos div {
-    padding: 2rem 4rem 0;
-    text-align: center;
+  padding: 2rem 4rem 0;
+  text-align: center;
 }
 
 .cursos-imagen {
-    display: flex;
-    margin: auto;
-    width: 5rem;
-    height: 5rem;
+  display: flex;
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
 }
 
-.cursos a button{
-    display: flex;
-    margin: 2rem auto 0;
+.cursos a button {
+  display: flex;
+  margin: 2rem auto 0;
 }
 
 /***************************** Proyectos ***************************/
 .proyectos {
-    margin: 5rem auto;
+  margin: 5rem auto;
 }
 
 .contenedor-proyectos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  margin-top: 2rem;
 }
 
 .proyecto {
-    margin: 2rem 0;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1rem;
+  margin: 2rem 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
 }
 
-.proyecto1{
-    background-image: url(images/proyecto1.jpg);
+.proyecto1 {
+  background-image: url(images/proyecto1.jpg);
 }
 
-.proyecto2{
-    background-image: url(images/proyecto2.jpg);
+.proyecto2 {
+  background-image: url(images/proyecto2.jpg);
 }
 
-.proyecto3{
-    background-image: url(images/proyecto3.jpg);
+.proyecto3 {
+  background-image: url(images/proyecto3.jpg);
 }
 
 .info {
-    padding: 4rem 0;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 60%);
-    border-radius: 1rem;
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 60%);
+  border-radius: 1rem;
 }
 
-.info p{
-    margin-top: 0;
+.info p {
+  margin-top: 0;
 }
 
-.proyectos a button{
-    display: flex;
-    margin: 2rem auto 0;
+.proyectos a button {
+  display: flex;
+  margin: 2rem auto 0;
 }
 
 /***************************** Contacto ***************************/
-.contacto{
-    margin: 5rem 0;
+.contacto {
+  margin: 5rem 0;
 }
 
-.contacto p{
-    text-align: center;
-    margin-top: 4rem;
+.contacto p {
+  text-align: center;
+  margin-top: 4rem;
 }
-
 
 /*** Formulario ***/
 .formulario {
-    width: min(60rem, 100%);
-    margin: 3rem auto 0;
-    border: 1px solid black;
-    border-radius: 1rem;
+  width: min(60rem, 100%);
+  margin: 3rem auto 0;
+  border: 1px solid black;
+  border-radius: 1rem;
 }
 
-.formulario fieldset{
-    border: none;
+.formulario fieldset {
+  border: none;
 }
 
-.contenedor-grid{
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
-    column-gap: 2rem;
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  column-gap: 2rem;
 }
 
 .grid:nth-child(3),
 .grid:nth-child(4) {
-    grid-column: 1/3;
+  grid-column: 1/3;
 }
 
-.grid{
-    margin-top: 1rem;
+.grid {
+  margin-top: 1rem;
 }
 
 .grid label {
-    margin-top: 0.5rem;
-    display: block;
+  margin-top: 0.5rem;
+  display: block;
 }
 
-.grid input, .grid textarea {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.8rem 0;
-    border-radius: 0.6rem;
-    border-color: black;
-    border-width: 1px;
+.grid input,
+.grid textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  border-radius: 0.6rem;
+  border-color: black;
+  border-width: 1px;
 }
 
 .form-boton {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 1.2rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.2rem;
+  margin-bottom: 2rem;
 }
