@@ -183,6 +183,9 @@ a{
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tabletas y teléfonos) */
 @media screen and (max-width: 768px) {
+    .fa-solid {
+        display: none;
+      }
     h1 {
         font-size: 36px;
       }
