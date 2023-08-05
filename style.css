@@ -237,11 +237,11 @@ a {
   }
 
   .navegacion nav a {
-    margin: 0.5rem 0; /* Agregar espacio vertical entre los enlaces */
+    margin: 0.3rem 0; /* Ajustar el espacio vertical entre los enlaces */
     text-align: center; /* Centrar el texto */
-    font-size: 18px; /* Tamaño de fuente más grande para una mejor legibilidad */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
     color: #ffffff; /* Color de texto blanco */
-    padding: 0.5rem 1rem; /* Añadir un poco de espaciado interno */
+    padding: 0.3rem 0.8rem; /* Ajustar el espaciado interno */
     border-radius: 0.5rem; /* Agregar esquinas redondeadas */
     transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el mouse */
   }
