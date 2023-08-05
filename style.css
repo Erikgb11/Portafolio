@@ -183,6 +183,22 @@ a{
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tabletas y teléfonos) */
 @media screen and (max-width: 768px) {
+    .header {
+        height: 50vh; /* Reducir la altura del header en dispositivos móviles */
+      }
+    
+      .contenedor-header {
+        background-color: rgba(0, 0, 0, 80%); /* Aumentar la opacidad del fondo en dispositivos móviles */
+      }
+    
+      .navegacion {
+        flex-direction: column; /* Colocar los enlaces de navegación en columna */
+        align-items: center; /* Centrar los elementos en el eje horizontal */
+      }
+    
+      .navegacion nav a {
+        margin: 0.5rem 0; /* Agregar espacio vertical entre los enlaces */
+      }
     .conocimientos {
         grid-template-columns: 1fr; /* Mostrar solo una sección por fila */
         column-gap: 3rem; /* Reducir el espacio entre las secciones */
