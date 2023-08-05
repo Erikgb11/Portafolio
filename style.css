@@ -195,11 +195,11 @@ a {
   }
 
   .titulo1 {
-    font-size: 40px;
+    font-size: 25px; /* Ajustar el tamaño de fuente para títulos en dispositivos móviles en orientación apaisada */
   }
 
   .p-title1 {
-    font-size: 16px;
+    font-size: 12px; /* Ajustar el tamaño de fuente para subtítulos en dispositivos móviles en orientación apaisada */
   }
 
   .title2,
@@ -215,18 +215,12 @@ a {
     font-size: 14px;
   }
   .header {
-    height: 50vh; /* Reducir la altura del header en dispositivos móviles */
+    height: 30vh; /* Reducir la altura del header en dispositivos móviles en orientación apaisada */
   }
 
   .contenedor-header {
-    background-color: rgba(
-      0,
-      0,
-      0,
-      80%
-    ); /* Aumentar la opacidad del fondo en dispositivos móviles */
+    background-color: rgba(0, 0, 0, 60%); /* Aumentar la opacidad del fondo en dispositivos móviles en orientación apaisada */
   }
-
   .navegacion {
     flex-direction: column; /* Cambiar la dirección del flex container a columna */
     align-items: center; /* Centrar los elementos horizontalmente */
