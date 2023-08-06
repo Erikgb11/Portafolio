@@ -353,16 +353,26 @@ a {
 }
 
 .proyecto1 {
-  background-image: url(images/proyecto1.jpg);
+  background-image: url(images/pexels-anna-shvets-4482900.jpg);
 }
 
 .proyecto2 {
-  background-image: url(images/proyecto2.jpg);
+  background-image: url(images/experiencia-programacion-persona-que-trabaja-codigos-computadora.jpg);
 }
 
 .proyecto3 {
-  background-image: url(images/proyecto3.jpg);
+  background-image: url(images/agencia-viajes-linea-joven-reservando-vacaciones-vacaciones-computadora-portatil.jpg);
 }
+.proyecto4 {
+    background-image: url(images/pexels-roman-pohorecki-230554.jpg);
+  }
+  .proyecto5 {
+    background-image: url(images/pexels-karolina-grabowska-4968391.jpg);
+  }
+  .proyecto6 {
+    background-image: url(images/pexels-mati-mango-6330644.jpg);
+  }
+
 
 .info {
   padding: 4rem 0;
@@ -380,6 +390,33 @@ a {
   display: flex;
   margin: 2rem auto 0;
 }
+/*** Footer ***/
+.footer {
+  background-color: #585859;
+  margin-top: auto;
+}
+
+.contenedor-footer {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  color: white;
+}
+
+.r-sociales a {
+  margin-right: 2rem;
+  color: white;
+}
+.nav-fondo {
+  background-color: #0D1A26;
+  position: sticky;
+  top: 0rem;
+}
 
 /***************************** Contacto ***************************/
 .contacto {
@@ -393,6 +430,12 @@ a {
 
 /*** Formulario ***/
 .formulario {
+  width: min(60rem, 100%);
+  margin: 3rem auto 0;
+  border: none;
+  border-radius: 1rem;
+}
+/* .formulario {
   width: min(60rem, 100%);
   margin: 3rem auto 0;
   border: 1px solid black;
@@ -438,4 +481,4 @@ a {
   justify-content: flex-end;
   margin-right: 1.2rem;
   margin-bottom: 2rem;
-}
+} */

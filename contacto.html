@@ -8,11 +8,12 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Titulo-->
-    <title>Portafolio de Fulanito</title>
+    <title>Erik Alexander González Bocio | Contacto</title>
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;800&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -39,36 +40,43 @@
         </div>
     </header>
 
-    <main class="contenedor">
+    <main class="container">
         <section class="contacto">
             <h1>¡Hablemos!</h1>
-            <p>Si te gusta mi trabajo, escribeme.</p>
+            <p>Si te gusta mi trabajo, escríbeme.</p>
             <!--Copiar el código del formulario de la clase anterior-->
-            <form class="formulario">
-                <fieldset class="contenedor-grid">
-                    <div class="grid">
-                        <label for="">Nombre:</label>
-                        <input type="text" placeholder="Tu nombre completo" name="name" required>
+            <form class="formulario" action="php/enviar_formulario.php" netlify data-netlify-recaptcha>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" name="name" required>
+                        </div>
                     </div>
-                    <div class="grid">
-                        <label for="">Teléfono:</label>
-                        <input type="tel" placeholder="Tu numero con lada (+249)">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Tu numero con lada (+249)">
+                        </div>
                     </div>
-                    <div class="grid">
-                        <label for="">Correo:</label>
-                        <input type="email" placeholder="ejemplo@gmail.com" name="email">
-                    </div>
-                    <div class="grid">
-                        <label for="">Mensaje:</label>
-                        <textarea name="message" id="" cols="70" rows="10" minlength="1" maxlength="250"></textarea>
-                    </div>
-                </fieldset>
+                </div>
+                <div class="mb-3">
+                    <label for="correo">Correo:</label>
+                    <input type="email" class="form-control" id="correo" placeholder="ejemplo@gmail.com" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea class="form-control" id="mensaje" name="message" cols="70" rows="10" minlength="1" maxlength="250"></textarea>
+                </div>
                 <div class="form-boton">
-                    <input class="boton" type="submit" value="Enviar">
+                    <input class="btn btn-primary" type="submit" value="Enviar">
                 </div>
             </form>
         </section>
     </main>
+
+
+    
 
     <!--Iconos de TablerIcons-->
     <footer class="footer">
