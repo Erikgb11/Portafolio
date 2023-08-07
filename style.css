@@ -333,7 +333,29 @@ a {
   }
 
   /***Proyectos***/
+  .proyectos {
+    margin: 1rem auto;
+  }
+  
+  .contenedor-proyectos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .proyecto {
+    padding-top: 80%; /* Reducir la relación de aspecto cuadrada */
+  }
+  
+  .proyecto .img2 {
+    display: none; /* Ocultar la segunda imagen */
+  }
 
+  /* Eliminar cualquier transición o movimiento */
+  .proyecto:hover .img2 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
   /***Sobre mi***/
   .conoceme .contenedor-con {
     flex-direction: column;
@@ -634,5 +656,20 @@ a {
   .contenedor-cursos {
     grid-template-columns: 1fr; /* Mostrar cursos en una sola columna */
     row-gap: 2rem; /* Ajustar el espacio vertical entre cursos */
+  }
+  /* proyectos */
+  
+}
+@media screen and (max-width: 520px) {
+  .contenedor-proyectos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .proyecto {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-right: 1rem;
   }
 }
