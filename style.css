@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Oswald&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Oswald:wght@200&family=Playfair+Display&family=Titillium+Web&display=swap');
+
 
 html {
   font-size: 62.5%;
@@ -8,8 +11,8 @@ html {
 
 *,
 *:before,
-*:after {
-  box-sizing: inherit;
+  *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -338,6 +341,10 @@ a {
   background-color: #2C3D73;
 }
 /*** Conoceme ***/
+.conocemeh1{
+  font-family: "Oswald";
+}
+
 .conoceme {
   margin-top: 5rem;
 }
@@ -404,62 +411,102 @@ a {
   background-color: #0D1A26;
 }
 /*Proyectos*/
+/* Estilos para el contenedor de proyectos */
 .proyectos {
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 
+/* Estilos para el contenedor de proyectos individuales */
 .contenedor-proyectos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
+/* Estilos para cada proyecto individual */
 .proyecto {
-  margin: 2rem 0;
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  padding-top: 100%; /* Relación de aspecto cuadrada */
 }
 
-.proyecto1 {
-  background-image: url(images/pexels-anna-shvets-4482900.jpg);
+/* Estilos para el contenedor de imágenes y texto en cada proyecto */
+.proyecto .img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.proyecto2 {
-  background-image: url(images/experiencia-programacion-persona-que-trabaja-codigos-computadora.jpg);
+/* Estilos para la primera imagen en cada proyecto */
+.proyecto img.img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.proyecto3 {
-  background-image: url(images/agencia-viajes-linea-joven-reservando-vacaciones-vacaciones-computadora-portatil.jpg);
+/* Estilos para la segunda imagen en cada proyecto */
+.proyecto .img2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 80%; /* Ajusta el tamaño de la imagen 2 */
+  height: auto; /* Para mantener la proporción */
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.proyecto4 {
-    background-image: url(images/pexels-roman-pohorecki-230554.jpg);
-  }
-  .proyecto5 {
-    background-image: url(images/pexels-karolina-grabowska-4968391.jpg);
-  }
-  .proyecto6 {
-    background-image: url(images/pexels-mati-mango-6330644.jpg);
-  }
 
+.proyecto:hover .img2 {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1); /* Efecto de escala al hacer hover */
+}
 
-.info {
-  padding: 4rem 0;
+/* Estilos para la información en cada proyecto */
+.proyecto .info {
+  padding: 1rem;
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 60%);
   border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.info p {
+.proyecto .info h3 {
   margin-top: 0;
 }
 
+.proyecto .info p {
+  margin-top: 0;
+}
+
+/* Estilos para el efecto de transición al hacer hover */
+.proyecto:hover {
+  transform: translateY(-5%) translateZ(0) perspective(250px) rotateX(10deg);
+}
+
+/* Estilos para el botón "Ver más" */
 .proyectos a button {
   display: flex;
   margin: 2rem auto 0;
 }
+
 
 /*** color footer ***/
 .colorf-p{
@@ -490,4 +537,27 @@ a {
 /*** color footer ***/
 .colorf-c{
   background-color: #2454D6;
+}
+
+/* Alert */
+.modal-header {
+  background-color: #2A7ABF;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-title {
+  color: #fff;
+}
+
+.modal-content {
+  border: 2px solid #2A7ABF;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.btn-close {
+  color: #fff;
 }
