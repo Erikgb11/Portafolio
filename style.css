@@ -592,9 +592,28 @@ a {
     display: none;
   }
 
-  .nav-fondo-n a {
-    padding: 5px;
-    font-size: 14px;
+  .navegacion-n {
+    flex-direction: column; /* Cambiar la dirección del flex container a columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .navegacion-n nav {
+    margin-top: 1rem; /* Agregar espacio entre el logo y los enlaces */
+  }
+
+  .navegacion-n nav a {
+    margin: 0.3rem 0; /* Ajustar el espacio vertical entre los enlaces */
+    text-align: center; /* Centrar el texto */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 0.3rem 0.8rem; /* Ajustar el espaciado interno */
+    border-radius: 0.5rem; /* Agregar esquinas redondeadas */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el mouse */
+  }
+
+  .navegacion-n nav a:hover {
+    /* Sin color de fondo al pasar el mouse */
+    background-color: transparent;
   }
 
   /*sobre mi*/
