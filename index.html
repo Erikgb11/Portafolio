@@ -44,6 +44,44 @@
             </div>
         </div>
     </header>
+    <script>
+        // Función para detectar la orientación del dispositivo y ajustar los estilos
+        function detectOrientation() {
+          const header = document.querySelector('.header');
+          const tituloHeader = document.querySelector('.titulo-header');
+          const titulo1 = document.querySelector('.titulo1');
+          const pTitle1 = document.querySelector('.p-title1');
+      
+          if (window.matchMedia("(orientation: portrait)").matches) {
+            // Dispositivo en orientación vertical
+            header.style.backgroundImage = 'url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)';
+            header.style.height = '500px'; // Establecemos una altura fija en píxeles
+            tituloHeader.style.paddingTop = '150px'; // Ajustamos el padding-top según la altura deseada
+      
+            titulo1.style.fontFamily = 'Handjet';
+            titulo1.style.fontSize = '60px';
+            pTitle1.style.fontFamily = 'Playfair Display';
+            pTitle1.style.fontSize = '18px';
+            pTitle1.style.marginTop = '20px';
+          } else {
+            // Dispositivo en orientación horizontal
+            header.style.backgroundImage = 'url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)';
+            header.style.height = '500px'; // Establecemos una altura fija en píxeles
+            tituloHeader.style.paddingTop = '150px'; // Ajustamos el padding-top según la altura deseada
+      
+            titulo1.style.fontFamily = 'Handjet';
+            titulo1.style.fontSize = '60px';
+            pTitle1.style.fontFamily = 'Playfair Display';
+            pTitle1.style.fontSize = '18px';
+            pTitle1.style.marginTop = '20px';
+          }
+        }
+      
+        // Ejecutamos la función cuando se carga la página y cuando se cambia la orientación del dispositivo
+        window.addEventListener('load', detectOrientation);
+        window.addEventListener('orientationchange', detectOrientation);
+      </script>
+      
 
     <main class="contenedor">
         <h2 class="title2">Educación y conocimientos</h2>

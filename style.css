@@ -109,7 +109,6 @@ a {
 }
 
 /***************************** Index ***************************/
-/*** Header ***/
 /* Imagen de fondo */
 .header {
   background-image: url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg);
@@ -150,6 +149,20 @@ a {
   padding-top: 10rem;
   /* padding-top: 20rem; */
 }
+
+/* Estilos para ajustar el tamaño de la imagen en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .header {
+    height: 50vh;
+  }
+  .titulo-header {
+    padding-top: 5rem;
+  }
+  .subtitulo-header {
+    padding-top: 1rem;
+  }
+}
+
 .conocimientos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -272,7 +285,11 @@ a {
     font-size: 14px;
   }
   .header {
-    height: 30vh; /* Reducir la altura del header en dispositivos móviles en orientación apaisada */
+    height: 50vh;
+  }
+
+  .titulo-header {
+    padding-top: 5rem;
   }
 
   .contenedor-header {
@@ -672,4 +689,5 @@ a {
     width: 100%;
     margin-right: 1rem;
   }
+
 }
