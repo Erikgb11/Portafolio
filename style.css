@@ -225,6 +225,24 @@ a {
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tabletas y teléfonos) */
 @media screen and (max-width: 768px) {
+  /*Header 2*/
+  .contenedor-n {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-fondo-n a {
+    max-width: 150px;
+    margin: 5px 10px;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+  .nav-fondo-n i {
+    display: block;
+    margin: 0 auto 5px;
+  }
+
   /***Index***/
   .fa-solid {
     display: none;
@@ -317,12 +335,18 @@ a {
   /***Proyectos***/
 
   /***Sobre mi***/
+  .conoceme .contenedor-con {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  /***Contacto**/
-  .contenedor-c {
-    flex-wrap: wrap;
-    justify-content: center;
-}
+  .foto-con {
+    margin-bottom: 1rem; /* Reducir el espacio entre la imagen y el texto en dispositivos móviles */
+  }
+
+  .descrip-con {
+    text-align: center;
+  }
 
 .nav-fondo-c a {
     max-width: 150px;
@@ -560,4 +584,36 @@ a {
 
 .btn-close {
   color: #fff;
+}
+
+@media screen and (max-width: 390px) {
+  /*index 2*/
+  .nav-fondo-n i {
+    display: none;
+  }
+
+  .nav-fondo-n a {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  /*sobre mi*/
+  .contenedor-con {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .descrip-con {
+    max-width: 100%; /* Utilizar todo el ancho disponible para el texto */
+    margin-top: 1rem; /* Reducir el espacio entre la imagen y el texto */
+  }
+
+  .cursos {
+    margin: 5rem 0 3rem; /* Ajustar el espacio entre cursos y certificaciones en dispositivos móviles */
+  }
+
+  .contenedor-cursos {
+    grid-template-columns: 1fr; /* Mostrar cursos en una sola columna */
+    row-gap: 2rem; /* Ajustar el espacio vertical entre cursos */
+  }
 }
