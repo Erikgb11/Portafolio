@@ -54,7 +54,7 @@
                 <img
                   class="img1"
                   src="images/pexels-anna-shvets-4482900.jpg"
-                  alt=""
+                  alt="" loading="lazy"
                 />
                 <div class="info">
                   <h3>Servicio web de E-commerce #1</h3>
@@ -64,7 +64,7 @@
                     plataforma de Azure
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt=""loading="lazy"/>
               </div>
             </a>
           </div>
@@ -76,6 +76,7 @@
                   class="img1"
                   src="images/experiencia-programacion-persona-que-trabaja-codigos-computadora.jpg"
                   alt=""
+                  loading="lazy"
                 />
                 <div class="info">
                   <h3>Laboratorio de Análisis de Malware #1</h3>
@@ -85,7 +86,7 @@
                     máquinas virtuales con Linux
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt="" loading="lazy"/>
               </div>
             </a>
           </div>
@@ -97,6 +98,7 @@
                   class="img1"
                   src="images/agencia-viajes-linea-joven-reservando-vacaciones-vacaciones-computadora-portatil.jpg"
                   alt=""
+                  loading="lazy"
                 />
                 <div class="info">
                   <h3>Agencia de Viajes</h3>
@@ -105,7 +107,7 @@
                     para una agencia de viajes
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt="" loading="lazy"/>
               </div>
             </a>
           </div>
@@ -117,6 +119,7 @@
                   class="img1"
                   src="images/pexels-roman-pohorecki-230554.jpg"
                   alt=""
+                  loading="lazy"
                 />
                 <div class="info">
                   <h3>ChatBot de Telegram</h3>
@@ -125,7 +128,7 @@
                     productos
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt="" loading="lazy"/>
               </div>
             </a>
           </div>
@@ -137,6 +140,7 @@
                   class="img1"
                   src="images/pexels-karolina-grabowska-4968391.jpg"
                   alt=""
+                  loading="lazy"
                 />
                 <div class="info">
                   <h3>Servicio web de E-commerce #2</h3>
@@ -146,7 +150,7 @@
                     Azure
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt="" loading="lazy"/>
               </div>
             </a>
           </div>
@@ -158,6 +162,7 @@
                   class="img1"
                   src="images/pexels-mati-mango-6330644.jpg"
                   alt=""
+                  loading="lazy"
                 />
                 <div class="info">
                   <h3>Laboratorio de Análisis de Malware #2</h3>
@@ -167,7 +172,7 @@
                     máquinas virtuales con Linux
                   </p>
                 </div>
-                <img class="img2" src="images/Hack_the_Mojave.png" alt="" />
+                <img class="img2" src="images/Hack_the_Mojave.png" alt=""loading="lazy"/>
               </div>
             </a>
           </div>
@@ -188,10 +193,13 @@
           message.style.backgroundColor = '#333';
           message.style.color = '#fff';
           message.style.padding = '8px';
-          document.body.appendChild(message);
+          
+          const proyectosSection = document.querySelector('.proyectos');
+          proyectosSection.insertBefore(message, proyectosSection.querySelector('.boton'));
         }
       });
     </script>
+    
     
 
     <footer class="footer colorf-p">

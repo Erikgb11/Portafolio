@@ -351,28 +351,53 @@ a {
 
   /***Proyectos***/
   .proyectos {
-    margin: 1rem auto;
+    margin: 5rem auto;
+    padding: 0 1rem; /* Añadido para mejorar el espacio en dispositivos móviles */
   }
   
+  /* Contenedor de proyectos */
   .contenedor-proyectos {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
+  /* Estilo de cada proyecto */
   .proyecto {
-    padding-top: 80%; /* Reducir la relación de aspecto cuadrada */
+    background-color: #f1f1f1; /* Cambio de color de fondo para mejor legibilidad */
+    border-radius: 1rem;
+    overflow: hidden; /* Añadido para evitar que las imágenes se desborden */
   }
   
+  /* Imágenes y contenido */
+  .img-container {
+    position: relative;
+  }
+  
+  .img1,
+  .img2 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+  
+  /* Botón Ver más */
+  .boton {
+    display: block;
+    margin: 2rem auto;
+
+  }
   .proyecto .img2 {
     display: none; /* Ocultar la segunda imagen */
   }
+  
 
-  /* Eliminar cualquier transición o movimiento */
-  .proyecto:hover .img2 {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
   /***Sobre mi***/
   .conoceme .contenedor-con {
     flex-direction: column;
@@ -380,7 +405,9 @@ a {
   }
 
   .foto-con {
-    margin-bottom: 1rem; /* Reducir el espacio entre la imagen y el texto en dispositivos móviles */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Centrar el contenido */
   }
 
   .descrip-con {
