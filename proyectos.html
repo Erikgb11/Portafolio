@@ -26,6 +26,9 @@
     />
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
+    <!-- animacion aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body>
@@ -44,16 +47,16 @@
     </header>
 
     <main>
-      <section class="contenedor proyectos">
-        <h1>Mis proyectos</h1>
+      <section class="contenedor proyectos" >
+        <h1 data-aos="fade-down-right">Mis proyectos</h1>
 
-        <div class="contenedor-proyectos">
+        <div class="contenedor-proyectos" data-aos="fade-down-left">
           <div class="proyecto proyecto1">
             <a href="">
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/pexels-anna-shvets-4482900.jpg"
+                  src="images/pexels-anna-shvets-4482900.webp"
                   alt="" loading="lazy"
                 />
                 <div class="info">
@@ -74,7 +77,7 @@
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/experiencia-programacion-persona-que-trabaja-codigos-computadora.jpg"
+                  src="images/experiencia-programacion-persona-que-trabaja-codigos-computadora.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -96,7 +99,7 @@
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/agencia-viajes-linea-joven-reservando-vacaciones-vacaciones-computadora-portatil.jpg"
+                  src="images/agencia-viajes-linea-joven-reservando-vacaciones-vacaciones-computadora-portatil.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -117,7 +120,7 @@
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/pexels-roman-pohorecki-230554.jpg"
+                  src="images/pexels-roman-pohorecki-230554.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -138,7 +141,7 @@
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/pexels-karolina-grabowska-4968391.jpg"
+                  src="images/pexels-karolina-grabowska-4968391.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -160,7 +163,7 @@
               <div class="img-container">
                 <img
                   class="img1"
-                  src="images/pexels-mati-mango-6330644.jpg"
+                  src="images/pexels-mati-mango-6330644.webp"
                   alt=""
                   loading="lazy"
                 />
@@ -177,31 +180,54 @@
             </a>
           </div>
         </div>
-
         <a href="https://github.com/Erikgb11" target="_blank">
           <button class="boton">Ver más</button>
         </a>
       </section>
     </main>
     <script>
+      //animacion letras
+      AOS.init();
+    </script>
+    <script>
+      // Carrusel para version mobile
       document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth <= 520) {
-          const message = document.createElement('div');
-          message.innerText =
-            'Desplaza horizontalmente para ver más proyectos';
-          message.style.textAlign = 'center';
-          message.style.backgroundColor = '#333';
-          message.style.color = '#fff';
-          message.style.padding = '8px';
-          
-          const proyectosSection = document.querySelector('.proyectos');
-          proyectosSection.insertBefore(message, proyectosSection.querySelector('.boton'));
+          const carouselArrows = document.createElement('div');
+          carouselArrows.className = 'carousel-arrows';
+          carouselArrows.innerHTML = `
+            <style>
+              /* Estilos para las flechas y el carrusel */
+              .carousel-arrows {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+              }
+              
+              .arrow {
+                font-size: 24px;
+                color: #333;
+                cursor: pointer;
+                transition: color 0.3s;
+              }
+              
+              .arrow:hover {
+                color: #555;
+              }
+            </style>
+            <span class="arrow left-arrow">&lt;</span>
+            <span class="arrow right-arrow">&gt;</span>
+          `;
+          document.body.appendChild(carouselArrows);
         }
       });
     </script>
     
-    
-
     <footer class="footer colorf-p">
       <div class="contenedor-footer contenedor">
         <!--Redes Sociales-->

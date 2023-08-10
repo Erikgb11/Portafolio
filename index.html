@@ -1,240 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!--Metadatos-->
-    <meta charset="UTF-8">
-    <meta name="author" content="-tu nombre-">
-    <meta name="description" content="Portafolio de -tus datos-">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#591d33"> 
+    <meta charset="UTF-8" />
+    <meta name="author" content="-tu nombre-" />
+    <meta name="description" content="Portafolio de -tus datos-" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#591d33" />
 
     <!--Titulo-->
     <title>Portafolio de Erik</title>
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;800&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;800&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"></script>
     <!--CSS-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="images/icono.svg">
-</head>
-<body >
+    <link rel="stylesheet" href="style.css" />
+    <!-- logo -->
+    <link rel="icon" type="image/svg+xml" href="images/icono.svg" />
+  </head>
+  <body>
     <header class="header" loading="lazy">
-        <div class="contenedor-header"> 
-            <div class="contenedor navegacion">
-                <a href="index.html">
-                    <i class="fa-solid fa-laptop-code fa-2x" style="color: #fefefe"></i>
-                </a>
-                <nav>
-                    <a href="index.html">Inicio</a>
-                    <a href="sobremi.html">Sobre mí</a>
-                    <a href="proyectos.html">Proyectos</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-            </div>
-            
-            <div class="titulo-header">
-                <h1 class="titulo1">Bienvenido a mi portafolio</h1>
-                <p class="p-title1">Soy Erik, futuro Ingeniero en Sistemas Computacionales</p>
-            </div>
+      <div class="contenedor-header">
+        <div class="contenedor navegacion">
+          <a href="index.html">
+            <i class="fa-solid fa-laptop-code fa-2x" style="color: #fefefe"></i>
+          </a>
+          <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobremi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
         </div>
+
+        <div class="titulo-header">
+          <h1 class="titulo1">Bienvenido a mi portafolio</h1>
+          <p class="p-title1">
+            Soy Erik,
+            <span
+              class="txt-rotate"
+              data-period="2000"
+              data-rotate='[ "Futuro Ingeniero en Sistemas Computacionales.", "Apasionado de la Programación.", "Desarrollador de Ideas y Soluciones.", "Bienvenido a mi rincón digital.", "Acompañame a conocer mi trabajo." ]'
+            ></span>
+          </p>
+        </div>
+      </div>
     </header>
     <script>
-        // Función para detectar la orientación del dispositivo y ajustar los estilos
-        function detectOrientation() {
-          const header = document.querySelector('.header');
-          const tituloHeader = document.querySelector('.titulo-header');
-          const titulo1 = document.querySelector('.titulo1');
-          const pTitle1 = document.querySelector('.p-title1');
-      
-          if (window.matchMedia("(orientation: portrait)").matches) {
-            // Dispositivo en orientación vertical
-            header.style.backgroundImage = 'url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)';
-            header.style.height = '500px'; // Establecemos una altura fija en píxeles
-            tituloHeader.style.paddingTop = '150px'; // Ajustamos el padding-top según la altura deseada
-      
-            titulo1.style.fontFamily = 'Handjet';
-            titulo1.style.fontSize = '60px';
-            pTitle1.style.fontFamily = 'Playfair Display';
-            pTitle1.style.fontSize = '18px';
-            pTitle1.style.marginTop = '20px';
-          } else {
-            // Dispositivo en orientación horizontal
-            header.style.backgroundImage = 'url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)';
-            header.style.height = '500px'; // Establecemos una altura fija en píxeles
-            tituloHeader.style.paddingTop = '150px'; // Ajustamos el padding-top según la altura deseada
-      
-            titulo1.style.fontFamily = 'Handjet';
-            titulo1.style.fontSize = '60px';
-            pTitle1.style.fontFamily = 'Playfair Display';
-            pTitle1.style.fontSize = '18px';
-            pTitle1.style.marginTop = '20px';
+      // Función para detectar la orientación del dispositivo y ajustar los estilos
+      function detectOrientation() {
+        const header = document.querySelector(".header");
+        const tituloHeader = document.querySelector(".titulo-header");
+        const titulo1 = document.querySelector(".titulo1");
+        const pTitle1 = document.querySelector(".p-title1");
+
+        if (window.matchMedia("(orientation: portrait)").matches) {
+          // Dispositivo en orientación vertical
+          header.style.backgroundImage =
+            "url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)";
+          header.style.height = "500px"; // Establecemos una altura fija en píxeles
+          tituloHeader.style.paddingTop = "150px"; // Ajustamos el padding-top según la altura deseada
+
+          titulo1.style.fontFamily = "Handjet";
+          titulo1.style.fontSize = "60px";
+          pTitle1.style.fontFamily = "Playfair Display";
+          pTitle1.style.fontSize = "18px";
+          pTitle1.style.marginTop = "20px";
+        } else {
+          // Dispositivo en orientación horizontal
+          header.style.backgroundImage =
+            "url(images/imagen-primer-plano-programador-trabajando-su-escritorio-oficina.jpg)";
+          header.style.height = "500px"; // Establecemos una altura fija en píxeles
+          tituloHeader.style.paddingTop = "150px"; // Ajustamos el padding-top según la altura deseada
+
+          titulo1.style.fontFamily = "Handjet";
+          titulo1.style.fontSize = "60px";
+          pTitle1.style.fontFamily = "Playfair Display";
+          pTitle1.style.fontSize = "18px";
+          pTitle1.style.marginTop = "20px";
+        }
+      }
+
+      // Ejecutamos la función cuando se carga la página y cuando se cambia la orientación del dispositivo
+      window.addEventListener("load", detectOrientation);
+      window.addEventListener("orientationchange", detectOrientation);
+
+      // Animacion letras que escriben
+      var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 100;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName("txt-rotate");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-rotate");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
           }
         }
-      
-        // Ejecutamos la función cuando se carga la página y cuando se cambia la orientación del dispositivo
-        window.addEventListener('load', detectOrientation);
-        window.addEventListener('orientationchange', detectOrientation);
-      </script>
-      
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML =
+          ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+      };
+    </script>
 
     <main class="contenedor">
-        <h2 class="title2">Educación y conocimientos</h2>
-        <div class="ruleta-botones">
-            <button class="boton-circular boton-anterior"><i class="fas fa-chevron-left"></i></button>
-            <div class="conocimientos">
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-                        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-                    </svg>
-                    <h3 class="title2">Estudiante de Ingeniería en Sistemas Computacionales</h3>
-                    <p class="p-title2">
-                        Soy un estudiante de Ingeniería en Sistemas Computacionales, cursando actualmente mi último año en la Escuela Superior de Cómputo (ESCOM) del Instituto Politécnico Nacional.
-                    </p>                
-                </section>
-        
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM257 255c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></svg>
-                    <h3 class="title2">Programación</h3>
-                    <p class="p-title2">Como futuro ingeniero en sistemas, tengo experiencia en diversos lenguajes de programación, incluyendo C, Python, Java, JavaScript, y C#.</p>
-                    <p class="p-title2">Estoy familiarizado con la resolución de problemas y la implementación de algoritmos en estos lenguajes.La programación es mi pasión, y siempre busco aprender nuevas técnicas y herramientas para seguir creciendo como desarrollador.</p>
-                </section>
-        
-                <!-- Contenedor adicional 1 -->
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M7 8l-4 4l4 4" />
-                        <path d="M17 8l4 4l-4 4" />
-                        <path d="M14 4l-4 16" />
-                    </svg>
-                    <h3 class="title2">Desarrollo Web</h3>
-                    <p class="p-title2">Poseo habilidades tanto en el desarrollo frontend como en el backend de aplicaciones web. </p>
-                    <p class="p-title2">En el frontend, cuento con experiencia en HTML, CSS y el uso de Bootstrap, lo que me permite crear interfaces atractivas y responsivas. Además, he trabajado con JavaScript para agregar interactividad y mejorar la experiencia del usuario en las páginas web.</p>
-                    <p class="p-title2">En cuanto al backend, tengo conocimientos en varios lenguajes de programación. He trabajado con JavaScript (Node.js) para construir servidores y aplicaciones backend. Además, cuento con experiencia en PHP, Java y C#, lo que me permite desarrollar funciones y lógica en el lado del servidor.</p>
-                </section>
-        
-                <!-- Contenedor adicional 2 -->
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></svg>
-                    <h3 class="title2">Bases de datos</h3>
-                    <p class="p-title2">Además de mis conocimientos en programación y desarrollo web, también he adquirido experiencia en el manejo de bases de datos, en particular MySQL.</p>
-                    <p class="p-title2">Durante mi formación académica, he trabajado con bases de datos y he desarrollado consultas para extraer y manipular datos de manera eficiente en diversos proyectos escolares.</p>
-                </section>
-        
-                <!-- Contenedor adicional 3 -->
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg>
-                    <h3 class="title2">Computación en la Nube</h3>
-                    <p class="p-title2">Cuento con conocimientos básicos en el uso de servicios de la nube, en particular, he trabajado con la plataforma de Azure para implementar servicios web en proyectos y prácticas escolares. Esta experiencia me ha brindado una comprensión inicial de cómo utilizar la nube para alojar aplicaciones y servicios, y estoy interesado en seguir explorando y profundizando mis habilidades en esta área emergente de la tecnología.</p>
-                </section>
+      <h2 class="title2">Educación y conocimientos</h2>
+      <div class="ruleta-botones">
+        <button class="boton-circular boton-anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="conocimientos">
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-school"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+              <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+            </svg>
+            <h3 class="title2">
+              Estudiante de Ingeniería en Sistemas Computacionales
+            </h3>
+            <p class="p-title2">
+              Soy un estudiante de Ingeniería en Sistemas Computacionales,
+              cursando actualmente mi último año en la Escuela Superior de
+              Cómputo (ESCOM) del Instituto Politécnico Nacional.
+            </p>
+          </section>
 
-                <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></svg>
-                    <h3 class="title2">Ciberseguridad:</h3>
-                    <p class="p-title2">He adquirido conocimientos fundamentales sobre ciberseguridad a través de cursos básicos en el tema. Durante mi formación, he abordado temas como la recopilación semipasiva, pasiva y activa de información, así como el análisis de vulnerabilidades y técnicas de explotación. Comprender la importancia de proteger la información y los sistemas en el mundo digital es fundamental en nuestra era tecnológica, y estoy ansioso por seguir aprendiendo y aplicando estos conocimientos en futuros proyectos y desafíos.</p>
-                </section>
-            </div>
-            <button class="boton-circular boton-siguiente"><i class="fas fa-chevron-right"></i></button>
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 384 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM257 255c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"
+              />
+            </svg>
+            <h3 class="title2">Programación</h3>
+            <p class="p-title2">
+              Como futuro ingeniero en sistemas, tengo experiencia en diversos
+              lenguajes de programación, incluyendo C, Python, Java, JavaScript,
+              y C#.
+            </p>
+            <p class="p-title2">
+              Estoy familiarizado con la resolución de problemas y la
+              implementación de algoritmos en estos lenguajes.La programación es
+              mi pasión, y siempre busco aprender nuevas técnicas y herramientas
+              para seguir creciendo como desarrollador.
+            </p>
+          </section>
+
+          <!-- Contenedor adicional 1 -->
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-code"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 8l-4 4l4 4" />
+              <path d="M17 8l4 4l-4 4" />
+              <path d="M14 4l-4 16" />
+            </svg>
+            <h3 class="title2">Desarrollo Web</h3>
+            <p class="p-title2">
+              Poseo habilidades tanto en el desarrollo frontend como en el
+              backend de aplicaciones web.
+            </p>
+            <p class="p-title2">
+              En el frontend, cuento con experiencia en HTML, CSS y el uso de
+              Bootstrap, lo que me permite crear interfaces atractivas y
+              responsivas. Además, he trabajado con JavaScript para agregar
+              interactividad y mejorar la experiencia del usuario en las páginas
+              web.
+            </p>
+            <p class="p-title2">
+              En cuanto al backend, tengo conocimientos en varios lenguajes de
+              programación. He trabajado con JavaScript (Node.js) para construir
+              servidores y aplicaciones backend. Además, cuento con experiencia
+              en PHP, Java y C#, lo que me permite desarrollar funciones y
+              lógica en el lado del servidor.
+            </p>
+          </section>
+
+          <!-- Contenedor adicional 2 -->
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 448 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"
+              />
+            </svg>
+            <h3 class="title2">Bases de datos</h3>
+            <p class="p-title2">
+              Además de mis conocimientos en programación y desarrollo web,
+              también he adquirido experiencia en el manejo de bases de datos,
+              en particular MySQL.
+            </p>
+            <p class="p-title2">
+              Durante mi formación académica, he trabajado con bases de datos y
+              he desarrollado consultas para extraer y manipular datos de manera
+              eficiente en diversos proyectos escolares.
+            </p>
+          </section>
+
+          <!-- Contenedor adicional 3 -->
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 640 512"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"
+              />
+            </svg>
+            <h3 class="title2">Computación en la Nube</h3>
+            <p class="p-title2">
+              Cuento con conocimientos básicos en el uso de servicios de la
+              nube, en particular, he trabajado con la plataforma de Azure para
+              implementar servicios web en proyectos y prácticas escolares. Esta
+              experiencia me ha brindado una comprensión inicial de cómo
+              utilizar la nube para alojar aplicaciones y servicios, y estoy
+              interesado en seguir explorando y profundizando mis habilidades en
+              esta área emergente de la tecnología.
+            </p>
+          </section>
+
+          <section>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"
+              />
+            </svg>
+            <h3 class="title2">Ciberseguridad:</h3>
+            <p class="p-title2">
+              He adquirido conocimientos fundamentales sobre ciberseguridad a
+              través de cursos básicos en el tema. Durante mi formación, he
+              abordado temas como la recopilación semipasiva, pasiva y activa de
+              información, así como el análisis de vulnerabilidades y técnicas
+              de explotación. Comprender la importancia de proteger la
+              información y los sistemas en el mundo digital es fundamental en
+              nuestra era tecnológica, y estoy ansioso por seguir aprendiendo y
+              aplicando estos conocimientos en futuros proyectos y desafíos.
+            </p>
+          </section>
         </div>
+        <button class="boton-circular boton-siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
     </main>
 
     <footer class="footer colorf-i">
-        <div class="contenedor-footer contenedor">
-            <!--Redes Sociales-->
-            <div class="r-sociales">
-                <a href="https://www.linkedin.com/in/erik-bocio/" target="_blank">
-                    <i class="fa-brands fa-linkedin fa-lg"></i>
-                </a>
+      <div class="contenedor-footer contenedor">
+        <!--Redes Sociales-->
+        <div class="r-sociales">
+          <a href="https://www.linkedin.com/in/erik-bocio/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-lg"></i>
+          </a>
 
-                <a href="https://github.com/Erikgb11" target="_blank">
-                    <i class="fa-brands fa-github fa-lg"></i>
-                </a>
+          <a href="https://github.com/Erikgb11" target="_blank">
+            <i class="fa-brands fa-github fa-lg"></i>
+          </a>
 
-                <a href="https://www.facebook.com/erik.gonzalezbocio/" target="_blank">
-                    <i class="fa-brands fa-facebook fa-lg"></i>
-                </a>
-            </div>
-            <!--Información sobre el autor del sitio-->
-            <p>Creado por Erik Alexander González Bocio 2023 &#169;</p>
+          <a
+            href="https://www.facebook.com/erik.gonzalezbocio/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook fa-lg"></i>
+          </a>
         </div>
+        <!--Información sobre el autor del sitio-->
+        <p>Creado por Erik Alexander González Bocio 2023 &#169;</p>
+      </div>
     </footer>
 
     <!-- Ruleta de contenedores -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"></script>
-<script>
-    const conocimientos = document.querySelector(".conocimientos");
-    const secciones = conocimientos.querySelectorAll("section");
-    const botonAnterior = document.querySelector(".boton-anterior");
-    const botonSiguiente = document.querySelector(".boton-siguiente");
-  
-    let indiceActual = 0;
-    const numSecciones = secciones.length;
-    let seccionesPorPagina = 2; // Muestra 2 secciones a la vez
-  
-    function actualizarBotones() {
-      botonAnterior.disabled = indiceActual === 0;
-      botonSiguiente.disabled = indiceActual >= numSecciones - seccionesPorPagina;
-    }
-  
-    function mostrarSecciones() {
-      secciones.forEach((seccion, indice) => {
-        seccion.style.display =
-          indice >= indiceActual && indice < indiceActual + seccionesPorPagina
-            ? "block"
-            : "none";
-      });
-    }
-  
-    function irHaciaAtras() {
-      if (indiceActual > 0) {
-        indiceActual--;
-        mostrarSecciones();
-        actualizarBotones();
-      }
-    }
-  
-    function irHaciaAdelante() {
-      if (indiceActual < numSecciones - seccionesPorPagina) {
-        indiceActual++;
-        mostrarSecciones();
-        actualizarBotones();
-      }
-    }
-  
-    botonAnterior.addEventListener("click", irHaciaAtras);
-    botonSiguiente.addEventListener("click", irHaciaAdelante);
-  
-    // Mostrar las primeras secciones al cargar la página
-    mostrarSecciones();
-    actualizarBotones();
-  
-    // Modificar el valor de seccionesPorPagina en la versión responsive
-    function actualizarResponsive() {
-      const viewportWidth = window.innerWidth;
-      if (viewportWidth <= 768) {
-        seccionesPorPagina = 1; // Mostrar solo una sección a la vez en dispositivos responsivos
-        mostrarSecciones(); // Mostrar la sección actualizada al cambiar el número de secciones por página
-        actualizarBotones();
-      } else {
-        seccionesPorPagina = 2; // Volver a mostrar dos secciones a la vez en dispositivos no responsivos
-        mostrarSecciones();
-        actualizarBotones();
-      }
-    }
-  
-    // Llamar a la función cuando se cargue la página y al cambiar el tamaño de la ventana
-    window.addEventListener("load", actualizarResponsive);
-    window.addEventListener("resize", actualizarResponsive);
-  </script>
-  
+    <script>
+      const conocimientos = document.querySelector(".conocimientos");
+      const secciones = conocimientos.querySelectorAll("section");
+      const botonAnterior = document.querySelector(".boton-anterior");
+      const botonSiguiente = document.querySelector(".boton-siguiente");
 
-</body>
+      let indiceActual = 0;
+      const numSecciones = secciones.length;
+      let seccionesPorPagina = 2; // Muestra 2 secciones a la vez
+
+      function actualizarBotones() {
+        botonAnterior.disabled = indiceActual === 0;
+        botonSiguiente.disabled =
+          indiceActual >= numSecciones - seccionesPorPagina;
+      }
+
+      function mostrarSecciones() {
+        secciones.forEach((seccion, indice) => {
+          seccion.style.display =
+            indice >= indiceActual && indice < indiceActual + seccionesPorPagina
+              ? "block"
+              : "none";
+        });
+      }
+
+      function irHaciaAtras() {
+        if (indiceActual > 0) {
+          indiceActual--;
+          mostrarSecciones();
+          actualizarBotones();
+        }
+      }
+
+      function irHaciaAdelante() {
+        if (indiceActual < numSecciones - seccionesPorPagina) {
+          indiceActual++;
+          mostrarSecciones();
+          actualizarBotones();
+        }
+      }
+
+      botonAnterior.addEventListener("click", irHaciaAtras);
+      botonSiguiente.addEventListener("click", irHaciaAdelante);
+
+      // Mostrar las primeras secciones al cargar la página
+      mostrarSecciones();
+      actualizarBotones();
+
+      // Modificar el valor de seccionesPorPagina en la versión responsive
+      function actualizarResponsive() {
+        const viewportWidth = window.innerWidth;
+        if (viewportWidth <= 768) {
+          seccionesPorPagina = 1; // Mostrar solo una sección a la vez en dispositivos responsivos
+          mostrarSecciones(); // Mostrar la sección actualizada al cambiar el número de secciones por página
+          actualizarBotones();
+        } else {
+          seccionesPorPagina = 2; // Volver a mostrar dos secciones a la vez en dispositivos no responsivos
+          mostrarSecciones();
+          actualizarBotones();
+        }
+      }
+
+      // Llamar a la función cuando se cargue la página y al cambiar el tamaño de la ventana
+      window.addEventListener("load", actualizarResponsive);
+      window.addEventListener("resize", actualizarResponsive);
+    </script>
+  </body>
 </html>
