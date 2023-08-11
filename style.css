@@ -33,7 +33,11 @@ body {
 }
 
 /*** Globales ***/
-.contenedor {
+.contenedor{
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.contenedori{
   max-width: 100rem;
   margin: 0 auto;
 }
@@ -254,9 +258,10 @@ a {
   .fa-solid{
     display: none;
   }
-  .contenedor img{
+  .contenedori img{
     display: none;
   }
+  
   h1 {
     font-size: 36px;
   }
@@ -687,9 +692,10 @@ a {
   /* proyectos */
 
   .loader {
-    background-size: auto 100%; /* Ajustar el tamaño de la imagen para que quepa */
-    background-position: center; /* Centrar la imagen */
-    opacity: 0.6; /* Cambiar la opacidad si lo deseas */
+    max-width: none; /* Anula el máximo ancho de la imagen en pantallas estrechas */
+    max-height: none; 
+    width: 100%; /* Establece el ancho de la imagen al 100% */
+  height: auto; /* Ajusta automáticamente la altura proporcionalmente */
   }
   
 }

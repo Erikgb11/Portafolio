@@ -199,44 +199,20 @@
       //animacion letras
       AOS.init();
     </script>
-    <script>
-      // Carrusel para version mobile
-      document.addEventListener('DOMContentLoaded', function () {
-        if (window.innerWidth <= 520) {
-          const carouselArrows = document.createElement('div');
-          carouselArrows.className = 'carousel-arrows';
-          carouselArrows.innerHTML = `
-            <style>
-              /* Estilos para las flechas y el carrusel */
-              .carousel-arrows {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1000;
-              }
-              
-              .arrow {
-                font-size: 24px;
-                color: #333;
-                cursor: pointer;
-                transition: color 0.3s;
-              }
-              
-              .arrow:hover {
-                color: #555;
-              }
-            </style>
-            <span class="arrow left-arrow">&lt;</span>
-            <span class="arrow right-arrow">&gt;</span>
-          `;
-          document.body.appendChild(carouselArrows);
-        }
-      });
-    </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth <= 520) {
+              const message = document.createElement('div');
+              message.innerText =
+                'Desplaza horizontalmente para ver más proyectos';
+              message.style.textAlign = 'center';
+              message.style.backgroundColor = '#333';
+              message.style.color = '#fff';
+              message.style.padding = '8px';
+              document.body.appendChild(message);
+            }
+          });
+        </script>
     
     <footer class="footer colorf-p">
       <div class="contenedor-footer contenedor">
