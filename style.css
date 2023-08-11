@@ -251,7 +251,10 @@ a {
   }
 
   /***Index***/
-  .fa-solid {
+  .fa-solid{
+    display: none;
+  }
+  .contenedor img{
     display: none;
   }
   h1 {
@@ -684,7 +687,7 @@ a {
   /* proyectos */
 
   .loader {
-    background-size: contain; /* Ajustar el tamaño de la imagen para que quepa */
+    background-size: auto 100%; /* Ajustar el tamaño de la imagen para que quepa */
     background-position: center; /* Centrar la imagen */
     opacity: 0.6; /* Cambiar la opacidad si lo deseas */
   }
