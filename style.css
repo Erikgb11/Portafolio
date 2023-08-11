@@ -172,6 +172,7 @@ a {
 .conocimientos section svg {
   display: flex;
   margin: auto;
+  align-items: center;
 }
 .conocimientos section {
   border: 1px solid black;
@@ -692,8 +693,7 @@ a {
   /* proyectos */
 
   .loader {
-    max-width: none; /* Anula el máximo ancho de la imagen en pantallas estrechas */
-    max-height: none; 
+    background-size: auto auto; /* Ajustar el tamaño de la imagen para que quepa y mantener la proporción */
   }
   
 }
