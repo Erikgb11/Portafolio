@@ -36,8 +36,16 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
+    <div class="loader"></div>
+    <script type="text/javascript">
+      $(window).load(function() {
+          $(".loader").fadeOut("slow");
+      });
+      </script>
     <header class="nav-fondo-n color-s">
       <div class="contenedor-n navegacion-n">
         <a href="index.html">

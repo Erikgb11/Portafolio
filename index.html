@@ -23,9 +23,18 @@
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
     <!-- logo -->
-    <link rel="icon" type="image/svg+xml" href="images/icono.svg" />
+    <link rel="icon" type="image/svg+xml" href="images/Erik_1.png" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
   </head>
   <body>
+    <div class="loader"></div>
+    <script type="text/javascript">
+      $(window).load(function() {
+          $(".loader").fadeOut("slow");
+      });
+      </script>
     <header class="header" loading="lazy">
       <div class="contenedor-header">
         <div class="contenedor navegacion">

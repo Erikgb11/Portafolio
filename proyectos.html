@@ -29,9 +29,17 @@
     <!-- animacion aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
 
   <body>
+    <div class="loader"></div>
+    <script type="text/javascript">
+      $(window).load(function() {
+          $(".loader").fadeOut("slow");
+      });
+      </script>
     <header class="nav-fondo-n color-p">
       <div class="contenedor-n navegacion-n">
         <a href="index.html">
