@@ -694,8 +694,6 @@ a {
   .loader {
     max-width: none; /* Anula el máximo ancho de la imagen en pantallas estrechas */
     max-height: none; 
-    width: 100%; /* Establece el ancho de la imagen al 100% */
-  height: auto; /* Ajusta automáticamente la altura proporcionalmente */
   }
   
 }
